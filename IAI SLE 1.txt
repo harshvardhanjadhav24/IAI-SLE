@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char command[100];
+
+    printf("AI Agent: Hello! What can I do?\n");
+    printf("You: ");
+    fgets(command, sizeof(command), stdin);
+
+    if (strstr(command, "hello")) {
+        printf("Agent: Hello! How are you?\n");
+    }
+    else if (strstr(command, "time")) {
+        printf("Agent: I can check the time for you.\n");
+    }
+    else if (strstr(command, "weather")) {
+        printf("Agent: I can check the weather for you.\n");
+    }
+    else if (strstr(command, "bye")) {
+        printf("Agent: Goodbye!\n");
+    }
+    else {
+        printf("Agent: I don't know that command yet.\n");
+    }
+
+    return 0;
+}
